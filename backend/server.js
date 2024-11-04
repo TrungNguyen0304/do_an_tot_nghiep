@@ -4,7 +4,7 @@ const app = express();
 require("dotenv").config();
 
 const connectDB = require("./configs/db");
-const authRoutes = require("./routes/userRoute");
+
 const locationRoutes = require("./routes/locationRoute");
 
 const PORT = process.env.PORT || 8001;
@@ -17,7 +17,7 @@ app.use(express.json());
 connectDB();
 
 // API routes
-app.use("/api/user", authRoutes);
+
 app.use("/api/location", locationRoutes);
 
 // Khởi động server

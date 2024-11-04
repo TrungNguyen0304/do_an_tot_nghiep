@@ -8,14 +8,13 @@ const EditLocation = () => {
     const [firstname, setFirstname] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null); // State to hold error messages
-    const [success, setSuccess] = useState(false); // State for success messages
 
     // Fetch the location data when the component mounts
     useEffect(() => {
         const fetchLocation = async () => {
             try {
                 const response = await axios.get(`http://localhost:8001/api/location/location/${id}`);
-                setFirstname(response.data.firstname); // Set the existing name for editing
+                setFirstname(response.data.firstname);
             } catch (error) {
                 setError(error.response ? error.response.data.message : error.message);
             } finally {
@@ -30,11 +29,9 @@ const EditLocation = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(null); // Reset error state before the update
-        setSuccess(false); // Reset success state before the update
 
         try {
             await axios.put(`http://localhost:8001/api/location/update/${id}`, { firstname });
-            setSuccess(true); // Set success state to true
             setTimeout(() => {
                 navigate('/location'); // Redirect to the location list after a short delay
             }, 1000);
@@ -50,7 +47,6 @@ const EditLocation = () => {
             <div className="form-container">
                 <h2>Cập nhật</h2>
                 {error && <div className="error-message">{error}</div>} {/* Show error message if exists */}
-                {success && <div className="success-message">Cập nhật thành công!</div>} {/* Show success message */}
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="firstName">Tên</label>
