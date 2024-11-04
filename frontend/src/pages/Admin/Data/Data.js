@@ -5,31 +5,39 @@ import {
   UilUsersAlt,
   UilPackage,
   UilChart,
-  UilSignOutAlt,
+  
 } from "@iconscout/react-unicons";
 
 // Analytics Cards imports
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 // Recent Card Imports
 import img1 from "../../../assets/admin/imgs/img1.png";
 import img2 from "../../../assets/admin/imgs/img2.png";
 import img3 from "../../../assets/admin/imgs/img3.png";
 
+
 // Sidebar Data
 export const SidebarData = [
   {
     icon: UilEstate,
     heading: "Dashboard",
+    Link:"/admin"
   },
   {
     icon: UilClipboardAlt,
-    heading: "Orders",
+    heading: "Destination",
+    Link: "destination",
   },
   {
     icon: UilUsersAlt,
     heading: "Customers",
+    Link: "/user",
+  },
+  {
+    icon: UilPackage,
+    heading: 'Location',
+    Link: "/location",
   },
   {
     icon: UilPackage,

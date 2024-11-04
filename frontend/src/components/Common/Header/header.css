@@ -143,7 +143,7 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
 }
 
 .user-dropdown-item:hover {
- 
+  
   color:  #fe4e37; /* Ensure text remains white on hover */
 
 }

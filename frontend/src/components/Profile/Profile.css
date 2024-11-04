@@ -35,23 +35,25 @@
   
 }
 
-.sidebar {
+.sidebar1 {
     width: 250px;
     border: 2px solid rgba(0, 0, 0, 0.1) ;
     padding: 20px 0;
     height: 280px;
     width: 300px;
-    border-radius: 3px  ;
+    border-radius: 3px;
+   
 }
 
-.sidebar ul {
+.sidebar1 ul {
     list-style: none;
     padding: 0;
     margin: 0;
    
+   
 }
 
-.sidebar li {
+.sidebar1 li {
     margin: 15px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -59,6 +61,7 @@
     transition: color 0.3s;
     border-bottom: 1px solid #ddd;
     padding: 3px 0px 15px 0px;
+   
 }
 
 .sidebar li:hover {

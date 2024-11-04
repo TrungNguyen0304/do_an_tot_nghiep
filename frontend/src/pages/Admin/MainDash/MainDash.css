@@ -1,8 +1,10 @@
 .MainDash{
     /* padding-top: 1rem; */
+ 
+    
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 3rem; /* Thay đổi giá trị này để điều chỉnh khoảng cách */
 }
 
 @media screen and (max-width: 1200px) {

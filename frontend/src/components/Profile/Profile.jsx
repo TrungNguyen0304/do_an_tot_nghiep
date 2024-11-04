@@ -8,7 +8,7 @@ function Profile() {
                 <span>Trang chủ</span> / <span>Tài khoản</span> / <span>Hồ sơ của tôi</span>
             </div>
             <div className="profile-content">
-                <div className="sidebar">
+                <div className="sidebar1">
                     <ul>
                         <li onClick={() => console.log('Go to profile')}>Hồ sơ của tôi</li>
                         <li onClick={() => console.log('Go to orders')}>Đơn hàng của tôi</li>

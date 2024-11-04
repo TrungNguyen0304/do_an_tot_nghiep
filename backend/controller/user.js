@@ -3,8 +3,6 @@ const {  validationResult } = require('express-validator');
 const User = require('../models/user'); // Path to your User model
 
 exports.register = [
-
-  
   // Handler
   async (req, res) => {
     const errors = validationResult(req);

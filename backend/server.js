@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const connectDB = require("./configs/db");
 const authRoutes = require("./routes/userRoute");
+const locationRoutes = require("./routes/locationRoute");
 
 const PORT = process.env.PORT || 8001;
 
@@ -17,6 +18,7 @@ connectDB();
 
 // API routes
 app.use("/api/user", authRoutes);
+app.use("/api/location", locationRoutes);
 
 // Khởi động server
 app.listen(PORT, () => {
